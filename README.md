@@ -1,4 +1,4 @@
-# Klasifikasi Play Tennis Menggunakan Naive Bayes
+# Klasifikasi Play Tennis - Naive Bayes
 
 ## Background
 Permainan tenis sangat dipengaruhi oleh kondisi cuaca. Keputusan untuk bermain tenis seringkali tergantung pada faktor seperti suhu, kelembapan, dan angin. Oleh karena itu, memprediksi apakah seseorang akan bermain tenis berdasarkan kondisi cuaca dapat membantu dalam pengambilan keputusan secara otomatis, tanpa bergantung pada penilaian manual yang bisa sangat bergantung pada interpretasi individu. Dalam proyek ini, kami menggunakan algoritma Naive Bayes untuk membangun model yang dapat memprediksi keputusan bermain tenis berdasarkan data cuaca yang diberikan.
@@ -25,9 +25,11 @@ Proyek ini memerlukan beberapa dependensi berikut:
 - **Python**: Versi 3.8+
 
 #### b. Library Utama  
-- `pandas`: Untuk pengolahan data  
+- `pandas`: Untuk pengolahan data
+- `numpy`:
 - `scikit-learn`: Untuk implementasi algoritma Naive Bayes  
 - `flask`: Untuk pembuatan antarmuka web
+- `pickle`: 
 
 #### c. Environment  
 - **Jupyter Notebook**: Untuk eksplorasi data dan pengembangan awal
@@ -39,8 +41,9 @@ Metode yang digunakan dalam proyek ini meliputi:
 Dataset diambil dari sumber [Kaggle](https://www.kaggle.com/datasets/fredericobreno/play-tennis).  
 
 ### b. Data Cleaning  
-- Tidak ada nilai kosong dalam dataset.  
-- Semua kolom dikonversi ke tipe data kategorikal.  
+- Tidak ada nilai kosong dalam dataset.
+- Menghapus kolom 'Day' yang tidak digunakan.
+- Nilai semua kolom dikonversi ke tipe data kategorikal.  
 
 ### c. Modelling  
 Model dibuat menggunakan algoritma **Naive Bayes** dengan langkah-langkah:  
@@ -53,6 +56,8 @@ Model dievaluasi menggunakan metrik berikut:
 - **Akurasi**  
 - **Confusion Matrix**  
 - **Classification Report**
+Hasil Evaluasi:  
+[Classification Report](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Classification%20Report.png)
 
 ## Interface  
 Sebuah antarmuka web sederhana dibuat menggunakan **Flask** untuk memprediksi apakah seseorang akan bermain tenis berdasarkan input berikut:  
@@ -67,19 +72,7 @@ Tampilan form:
 
 Output berupa hasil prediksi: **Play Tennis: Yes/No**.  
 
----
-
-## 7. Results  
-Model menghasilkan akurasi **90%** pada data pengujian, dengan detail confusion matrix sebagai berikut:  
-
-|               | Predicted Yes | Predicted No |  
-|---------------|---------------|--------------|  
-| **Actual Yes** | 9             | 1            |  
-| **Actual No**  | 2             | 8            |  
-
----
-
-## 8. How to Run  
+## How to Run  
 
 ### a. Persyaratan  
 - Python 3.8+  
@@ -97,14 +90,12 @@ pip install -r requirements.txt
 
 3. Jalankan aplikasi web:
 
-python app.py
+python play_tennis_app.py
 
 
 4. Buka browser dan akses:
 
 http://127.0.0.1:5000
-
-
 
 
 ---
