@@ -65,7 +65,7 @@ Sebuah antarmuka web sederhana dibuat menggunakan **Flask** untuk memprediksi ap
 - Wind (*Yes, No*).  
 
 Tampilan form:
-[Interface](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Simple%20Interface.png?row=true)
+[Interface](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Simple%20Interface.png?raw=true)
 
 Output berupa hasil prediksi:
 `Tidak Bisa Bermain!` **atau** `Bisa Bermain!`
