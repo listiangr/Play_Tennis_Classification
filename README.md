@@ -54,8 +54,8 @@ Model dibuat menggunakan algoritma **Naive Bayes** dengan langkah-langkah:
 ### d. Evaluation  
 Model dievaluasi menggunakan metrik berikut:  
 - **Akurasi**: Hasil akurasi prediksi dari model adalah **80%**.
-- **Classification Report**: 
-[Classification Report](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Classification%20Report.png)
+- **Classification Report**:   
+![Classification Report](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Classification%20Report.png)
 
 ## Interface  
 Sebuah antarmuka web sederhana dibuat menggunakan **Flask** untuk memprediksi apakah seseorang dapat bermain tenis berdasarkan input berikut:  
@@ -64,8 +64,8 @@ Sebuah antarmuka web sederhana dibuat menggunakan **Flask** untuk memprediksi ap
 - Humidity (*High, Normal*).  
 - Wind (*Yes, No*).  
 
-Tampilan form:
-[Interface](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Simple%20Interface.png?raw=true)
+Tampilan form:  
+![Interface](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Simple%20Interface.png?)
 
 Output berupa hasil prediksi:
 `Tidak Bisa Bermain!` **atau** `Bisa Bermain!`
