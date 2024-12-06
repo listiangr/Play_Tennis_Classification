@@ -24,12 +24,12 @@ Proyek ini memerlukan beberapa dependensi berikut:
 #### a. Bahasa
 - **Python**: Versi 3.8+
 
-#### b. Library Utama  
-- `pandas`: Untuk pengolahan data
-- `numpy`:
-- `scikit-learn`: Untuk implementasi algoritma Naive Bayes  
-- `flask`: Untuk pembuatan antarmuka web
-- `pickle`: 
+#### b. Library
+- `pandas`: Untuk pengolahan dan manipulasi data berbentuk tabel (*DataFrame*).  
+- `numpy`: Untuk operasi numerik dan manipulasi array/matriks.  
+- `scikit-learn`: Untuk implementasi algoritma Naive Bayes dan *machine learning*.  
+- `flask`: Untuk pembuatan antarmuka web berbasis Python.  
+- `pickle`: Untuk menyimpan dan memuat model atau objek Python. 
 
 #### c. Environment  
 - **Jupyter Notebook**: Untuk eksplorasi data dan pengembangan awal
@@ -47,68 +47,40 @@ Dataset diambil dari sumber [Kaggle](https://www.kaggle.com/datasets/fredericobr
 
 ### c. Modelling  
 Model dibuat menggunakan algoritma **Naive Bayes** dengan langkah-langkah:  
-1. Membagi dataset menjadi *train* dan *test set*.  
-2. Melatih model pada *train set*.  
-3. Memprediksi hasil pada *test set*.  
+1. Membagi dataset menjadi *data train* dan *data test*. Rasio data yang digunakan adalah 70% data train, 30% data test. 
+3. Melatih model naive bayes pada *data train*.  
+4. Memprediksi hasil pada *data test*.  
 
 ### d. Evaluation  
 Model dievaluasi menggunakan metrik berikut:  
-- **Akurasi**  
-- **Confusion Matrix**  
-- **Classification Report**
-Hasil Evaluasi:  
+- **Akurasi**: Hasil akurasi prediksi dari model adalah **80%**.
+- **Classification Report**: 
 [Classification Report](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Classification%20Report.png)
 
 ## Interface  
-Sebuah antarmuka web sederhana dibuat menggunakan **Flask** untuk memprediksi apakah seseorang akan bermain tenis berdasarkan input berikut:  
-- Cuaca (*Sunny, Overcast, Rainy*).  
-- Suhu (*Hot, Mild, Cool*).  
-- Kelembapan (*High, Normal*).  
-- Kondisi angin (*Yes, No*).  
+Sebuah antarmuka web sederhana dibuat menggunakan **Flask** untuk memprediksi apakah seseorang dapat bermain tenis berdasarkan input berikut:  
+- Outlook (*Sunny, Overcast, Rainy*).
+- Temperature (*Hot, Mild, Cool*).  
+- Humidity (*High, Normal*).  
+- Wind (*Yes, No*).  
 
 Tampilan form:
 [Interface](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Simple%20Interface.png?row=true)
 
-Output berupa hasil prediksi: **Play Tennis: Yes/No**.  
+Output berupa hasil prediksi:
+`Tidak Bisa Bermain!` **atau** `Bisa Bermain!`
 
 ## How to Run  
-
-### a. Persyaratan  
-- Python 3.8+  
-- Library: `flask`, `scikit-learn`, `pandas`, `numpy`  
-
-### b. Langkah-Langkah  
 1. Clone repository
    ```bash
    git clone https://github.com/listiangr/Play_Tennis_Classification.git
-
 2. Install dependensi
    ```bash
    pip install -r requirements.txt
-
-
 3. Run app
    ```bash
    python play_tennis_app.py
-
-
 4. Open browser
    ```bash
    http://127.0.0.1:5000
 
-
----
-
-Authors
-
-Proyek ini dikembangkan oleh:
-
-Listia Ningrum
-
-
-
----
-
-License
-
-Proyek ini menggunakan lisensi MIT. Lihat file LICENSE untuk detailnya.
