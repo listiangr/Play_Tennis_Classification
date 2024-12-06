@@ -67,8 +67,7 @@ Sebuah antarmuka web sederhana dibuat menggunakan **Flask** untuk memprediksi ap
 - Kondisi angin (*Yes, No*).  
 
 Tampilan form:
-
-+--------------------------+ | Input Kondisi Cuaca      | +--------------------------+ | Cuaca: [Dropdown]        | | Suhu: [Dropdown]         | | Kelembapan: [Dropdown]   | | Angin: [Dropdown]        | | [Predict Button]         | +--------------------------+
+[Interface](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Simple%20Interface.png?row=true)
 
 Output berupa hasil prediksi: **Play Tennis: Yes/No**.  
 
@@ -79,28 +78,28 @@ Output berupa hasil prediksi: **Play Tennis: Yes/No**.
 - Library: `flask`, `scikit-learn`, `pandas`, `numpy`  
 
 ### b. Langkah-Langkah  
-1. Clone repository ini:  
+1. Clone repository
    ```bash
-   git clone https://github.com/username/play-tennis-classification.git
+   git clone https://github.com/listiangr/Play_Tennis_Classification.git
 
-2. Install dependensi:
-
-pip install -r requirements.txt
-
-
-3. Jalankan aplikasi web:
-
-python play_tennis_app.py
+2. Install dependensi
+   ```bash
+   pip install -r requirements.txt
 
 
-4. Buka browser dan akses:
+3. Run app
+   ```bash
+   python play_tennis_app.py
 
-http://127.0.0.1:5000
+
+4. Open browser
+   ```bash
+   http://127.0.0.1:5000
 
 
 ---
 
-9. Authors
+Authors
 
 Proyek ini dikembangkan oleh:
 
@@ -110,6 +109,6 @@ Listia Ningrum
 
 ---
 
-10. License
+License
 
 Proyek ini menggunakan lisensi MIT. Lihat file LICENSE untuk detailnya.
