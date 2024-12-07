@@ -56,9 +56,36 @@ Model dibuat menggunakan algoritma **Naive Bayes** dengan langkah-langkah:
 4. Memprediksi hasil pada data test.  
 
 ### d. Evaluation  
-Model dievaluasi menggunakan metrix seperti `accuracy`, `precision`, `recall`, `f1-score`. Nilai `Accuracy` prediksi dari model adalah `80%`. Berikut adalah classification report dari metrix tersebut.  
+Evaluasi model dilakukan dengan menggunakan **Classification Report** yang mencakup metrik `precision`, `recall`, `f1-score`, dan `accuracy`. Berikut adalah hasil evaluasi:
 
 ![Classification Report](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Classification%20Report.jpg)
+
+Berdasarkan hasil **Classification Report** di atas, berikut adalah penjelasan dari metrik-metrik yang digunakan untuk mengevaluasi performa model:
+
+1. **Kelas 0 (Negatif)**:
+   - **Precision = 0.50**: Hanya 50% prediksi kelas 0 yang benar-benar akurat. Ini menunjukkan model sering salah dalam mengidentifikasi kelas 0 meskipun recall-nya sempurna.
+   - **Recall = 1.00**: Model berhasil mendeteksi semua data berlabel kelas 0, artinya model tidak melewatkan satupun data kelas 0.
+   - **F1-Score = 0.67**: Metrik ini adalah rata-rata harmonik dari precision dan recall. Dengan precision yang rendah dan recall yang sempurna, F1-score tercatat cukup moderat.
+   - **Support = 1**: Hanya ada 1 data berlabel kelas 0 dalam dataset, yang membuat metrik ini sangat dipengaruhi oleh data tersebut.
+
+2. **Kelas 1 (Positif)**:
+   - **Precision = 1.00**: Semua prediksi kelas 1 benar, yang menunjukkan model sangat akurat dalam mengidentifikasi kelas 1.
+   - **Recall = 0.75**: Dari semua data berlabel kelas 1, model berhasil mendeteksi 75% dari data tersebut.
+   - **F1-Score = 0.86**: F1-Score yang tinggi mencerminkan bahwa model cukup baik dalam menyeimbangkan antara precision dan recall.
+   - **Support = 4**: Terdapat 4 data berlabel kelas 1 dalam dataset.
+
+3. **Keseluruhan Model**:
+   - **Accuracy**: **80%** — Model berhasil memprediksi dengan benar 80% dari total data yang ada.
+   - **Macro Average**:  
+     - **Precision = 0.75**  
+     - **Recall = 0.88**  
+     - **F1-Score = 0.76**  
+     Rata-rata metrik ini dihitung tanpa memperhatikan jumlah data tiap kelas, memberikan gambaran tentang kinerja model secara keseluruhan.
+   - **Weighted Average**:  
+     - **Precision = 0.90**  
+     - **Recall = 0.80**  
+     - **F1-Score = 0.82**  
+     Nilai ini memberikan gambaran kinerja model yang lebih diperhitungkan dengan jumlah data yang lebih besar pada kelas 1.
 
 ## Interface  
 Sebuah antarmuka web sederhana dibuat menggunakan `Flask` untuk memprediksi apakah seseorang dapat bermain tenis berdasarkan input berikut:  
@@ -72,6 +99,12 @@ Output berupa hasil prediksi: `Tidak Bisa Bermain!` **atau** `Bisa Bermain!`
 Tampilan form:
 
 ![Interface](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Simple%20Interface.jpg)
+
+## Kesimpulan
+- Model menunjukkan **akurasinya sebesar 80%**, yang menunjukkan kinerja yang cukup baik secara keseluruhan.
+- **Precision** untuk kelas 1 sangat tinggi (1.00), namun **recall** untuk kelas 1 masih bisa diperbaiki agar lebih banyak data kelas 1 yang terdeteksi.
+- **Precision** untuk kelas 0 lebih rendah (0.50), tetapi **recall** untuk kelas 0 sempurna (1.00), yang berarti model berhasil mendeteksi semua data kelas 0 meskipun dengan akurasi yang lebih rendah.
+- Ketidakseimbangan jumlah data antara kelas 0 dan kelas 1 (support kelas 0 = 1, kelas 1 = 4) memengaruhi hasil evaluasi.
 
 ## How to Run  
 1. Clone repository
