@@ -62,10 +62,6 @@ Evaluasi model dilakukan dengan menggunakan **Classification Report** yang menca
 
 Berdasarkan hasil **Classification Report** di atas, berikut adalah penjelasan dari metrik-metrik yang digunakan untuk mengevaluasi performa model:
 
-### **Akurasi Model**
-- **Accuracy = 80%**  
-  Model berhasil memprediksi
-
 1. **Akurasi Model**: Model berhasil memprediksi dengan benar 80% dari total data yang ada.
 2. **Kelas 0 (Negatif)**:
    - **Precision = 0.50**: Hanya 50% prediksi kelas 0 yang benar-benar akurat. Ini menunjukkan model sering salah dalam mengidentifikasi kelas 0 meskipun recall-nya sempurna.
