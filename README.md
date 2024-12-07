@@ -88,7 +88,7 @@ Tampilan form:
 
 ![Interface](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Simple%20Interface.jpg)
 
-## Kesimpulan
+## Conclusion
 - Model menunjukkan **akurasinya sebesar 80%**, yang menunjukkan kinerja yang cukup baik secara keseluruhan.
 - **Precision** untuk kelas 1 sangat tinggi (1.00), namun **recall** untuk kelas 1 masih bisa diperbaiki agar lebih banyak data kelas 1 yang terdeteksi.
 - **Precision** untuk kelas 0 lebih rendah (0.50), tetapi **recall** untuk kelas 0 sempurna (1.00), yang berarti model berhasil mendeteksi semua data kelas 0 meskipun dengan akurasi yang lebih rendah.
