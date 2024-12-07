@@ -73,7 +73,7 @@ Berdasarkan hasil **Classification Report** di atas, berikut adalah penjelasan d
    - `Precision = 1.00`: Semua prediksi kelas 1 benar, yang menunjukkan model sangat akurat dalam mengidentifikasi kelas 1.
    - `Recall = 0.75`: Dari semua data berlabel kelas 1, model berhasil mendeteksi 75% dari data tersebut.
    - `F1-Score = 0.86`: F1-Score yang tinggi mencerminkan bahwa model cukup baik dalam menyeimbangkan antara precision dan recall.
-   - `Support = 4: Terdapat 4 data berlabel kelas 1 dalam dataset.
+   - `Support = 4`: Terdapat 4 data berlabel kelas 1 dalam dataset.
   
 ## Interface  
 Sebuah antarmuka web sederhana dibuat menggunakan `Flask` untuk memprediksi apakah seseorang dapat bermain tenis berdasarkan input berikut:  
