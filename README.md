@@ -34,6 +34,10 @@ Proyek ini memerlukan beberapa dependensi berikut:
 #### c. Environment  
 - `Jupyter Notebook`: Untuk eksplorasi data dan pengembangan awal
 
+#### d. Frontend
+- `HTML`: Digunakan untuk membuat struktur dasar antarmuka web, seperti form input, tabel hasil prediksi, dan navigasi.
+- `CSS`: Digunakan untuk mempercantik tampilan antarmuka web dengan pengaturan warna, tata letak, dan efek visual.
+
 ## Methodology
 Metode yang digunakan dalam proyek ini meliputi: 
 
@@ -41,9 +45,9 @@ Metode yang digunakan dalam proyek ini meliputi:
 Dataset diambil dari sumber [Kaggle](https://www.kaggle.com/datasets/fredericobreno/play-tennis).  
 
 ### b. Data Cleaning  
-- Tidak ada nilai kosong dalam dataset.
 - Menghapus kolom 'Day' yang tidak digunakan.
-- Nilai semua kolom dikonversi ke data numerikal.  
+- Mengubah nilai kategorikal menjadi nilai numerik.
+- Ekstraksi kolom data untuk digunakan sebaga input dan output. 
 
 ### c. Modelling  
 Model dibuat menggunakan algoritma **Naive Bayes** dengan langkah-langkah:  
