@@ -22,7 +22,7 @@ Dataset yang digunakan berisi informasi tentang kondisi cuaca dan keputusan apak
 Proyek ini memerlukan beberapa dependensi berikut:
 
 #### a. Bahasa
-- **Python**: Versi 3.8+
+- `Python`: Versi 3.8+
 
 #### b. Library
 - `pandas`: Untuk pengolahan dan manipulasi data berbentuk tabel (*DataFrame*).  
@@ -32,7 +32,7 @@ Proyek ini memerlukan beberapa dependensi berikut:
 - `pickle`: Untuk menyimpan dan memuat model atau objek Python. 
 
 #### c. Environment  
-- **Jupyter Notebook**: Untuk eksplorasi data dan pengembangan awal
+- `Jupyter Notebook`: Untuk eksplorasi data dan pengembangan awal
 
 ## Methodology
 Metode yang digunakan dalam proyek ini meliputi: 
@@ -43,22 +43,22 @@ Dataset diambil dari sumber [Kaggle](https://www.kaggle.com/datasets/fredericobr
 ### b. Data Cleaning  
 - Tidak ada nilai kosong dalam dataset.
 - Menghapus kolom 'Day' yang tidak digunakan.
-- Nilai semua kolom dikonversi ke tipe data kategorikal.  
+- Nilai semua kolom dikonversi ke data numerikal.  
 
 ### c. Modelling  
 Model dibuat menggunakan algoritma **Naive Bayes** dengan langkah-langkah:  
-1. Membagi dataset menjadi *data train* dan *data test*. Rasio data yang digunakan adalah 70% data train, 30% data test. 
-3. Melatih model naive bayes pada *data train*.  
-4. Memprediksi hasil pada *data test*.  
+1. Membagi dataset menjadi `data train` dan `data test`. Rasio data yang digunakan adalah `70% data train` dan `30% data test`. 
+3. Melatih model naive bayes pada data train.  
+4. Memprediksi hasil pada data test.  
 
 ### d. Evaluation  
 Model dievaluasi menggunakan metrik berikut:  
-- **Akurasi**: Hasil akurasi prediksi dari model adalah **80%**.
+- **Akurasi**: Hasil akurasi prediksi dari model adalah `80%`.
 - **Classification Report**:   
 ![Classification Report](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Classification%20Report.png)
 
 ## Interface  
-Sebuah antarmuka web sederhana dibuat menggunakan **Flask** untuk memprediksi apakah seseorang dapat bermain tenis berdasarkan input berikut:  
+Sebuah antarmuka web sederhana dibuat menggunakan `Flask` untuk memprediksi apakah seseorang dapat bermain tenis berdasarkan input berikut:  
 - Outlook (*Sunny, Overcast, Rainy*).
 - Temperature (*Hot, Mild, Cool*).  
 - Humidity (*High, Normal*).  
