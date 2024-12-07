@@ -52,9 +52,7 @@ Model dibuat menggunakan algoritma **Naive Bayes** dengan langkah-langkah:
 4. Memprediksi hasil pada data test.  
 
 ### d. Evaluation  
-Model dievaluasi menggunakan metrik berikut:  
-- **Akurasi**: Hasil akurasi prediksi dari model adalah `80%`.
-- **Classification Report**:   
+Model dievaluasi menggunakan metrix seperti `accuracy`, `precision`, `recall`, `f1-score`. Nilai `Accuracy` prediksi dari model adalah `80%`. Berikut adalah classification report dari metrix tersebut. 
 ![Classification Report](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Classification%20Report.png)
 
 ## Interface  
@@ -63,9 +61,8 @@ Sebuah antarmuka web sederhana dibuat menggunakan `Flask` untuk memprediksi apak
 - Temperature (*Hot, Mild, Cool*).  
 - Humidity (*High, Normal*).  
 - Wind (*Yes, No*).  
-
 Tampilan form:  
-![Interface](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Simple%20Interface.png?)
+![Interface](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Simple%20Interface.jpg)
 
 Output berupa hasil prediksi:
 `Tidak Bisa Bermain!` **atau** `Bisa Bermain!`
