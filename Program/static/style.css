@@ -1,0 +1,239 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.header {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: #7C444F;
+    color: white;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #E16A54;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+}
+
+/* Content Layout */
+.content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+/* Condition Section */
+.condition {
+    background-color: #7C444F;
+    padding: 20px;
+    border-bottom-left-radius: 30px;
+}
+
+.condition h2 {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+/* Dropdown Inputs */
+.condition-type {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 20px;
+    color: white;
+    font-size: 15px;
+    align-items: center;
+}
+
+.condition-type select {
+    height: 28px;
+    background-color: #E16A54;
+    color: white;
+    border: 1px solid white;
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* Submit Button */
+.submit {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    display: grid;
+    justify-content: right;
+    grid-template-columns: 1fr 2fr;
+}
+
+.submit button {
+    justify-self: center;
+    width: 40%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #E16A54;
+    color: white;
+    border: 1px solid white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #7C444F;
+}
+
+/* Result Section */
+.result {
+    background-color: #7C444F;
+    border-left: 1px solid white;
+    border-bottom-right-radius: 30px;
+}
+
+.result h2 {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    width: 75%;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    font-size: 13px;
+    text-align: left;
+}
+
+/* Result Prediction Box */
+.result-predict {
+    background-color: #E16A54;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.result-predict p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .condition, .result {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .condition-type {
+        grid-template-columns: 1fr 5fr;
+        font-size: 14px;
+    }
+
+    .condition-type select {
+        margin-top: 3px;
+    }
+
+    .submit button {
+        width: 40%;
+        justify-self: right;
+        margin-top: 10px;
+        font-size: 15px;
+        height: 40px;
+    }
+
+    table {
+        width: 75%;
+    }
+
+    .result h2 {
+        margin-top: 5px;
+    }
+
+    .result-predict p {
+        font-size: 18px;
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 480px) {
+    .header {
+        font-size: 12px;
+        padding: 15px;
+    }
+
+    .profile {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .condition h2, .result h2 {
+        font-size: 18px;
+    }
+
+    .condition-type {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .condition-type select {
+        font-size: 12px;
+        height: 24px;
+    }
+
+    .submit button {
+        width: 50%;
+        font-size: 13px;
+        margin-top: 5px;
+        height: 30px;
+    }
+
+    .result h2 {
+        margin-top: 0;
+    }
+    
+    .result-predict p {
+        font-size: 16px;
+    }
+}

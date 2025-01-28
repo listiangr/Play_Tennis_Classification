@@ -1,55 +1,55 @@
 from flask import Flask, request, render_template
 import pickle
-import numpy as np 
+import numpy as np
 
-# Inisialisasi aplikasi Flask
+# Initialize the Flask application
 app = Flask(__name__)
 
-# Membuka dan memuat model yang telah disimpan sebelumnya
-model_file = open('model_play_tennis.pkl', 'rb')
-model = pickle.load(model_file, encoding='bytes')
+# Open and load the saved model
+model_file = open('play_tennis_model.pkl', 'rb')
+model = pickle.load(model_file)
 
-# Route untuk halaman utama
+# Route for the main page
 @app.route('/')
 def index():
-    # Mengembalikan tampilan HTML dengan nilai default untuk hasil
-    return render_template('index.html', hasil=0)
+    # Return the HTML page with default values for the result
+    return render_template('index.html', hasil=None, outlook=None, temp=None, humidity=None, wind=None)
 
-# Route untuk melakukan prediksi berdasarkan input dari pengguna
+# Route for making predictions based on user input
 @app.route('/predict', methods=['POST'])
 def predict():
     '''
-    Fungsi untuk memprediksi apakah bisa bermain berdasarkan input pengguna
-    dan menampilkan hasil prediksi ke halaman HTML
+    Function to predict if you can play tennis based on user input
+    and show the result on the HTML page
     '''
-    # Mendapatkan data input dari form di halaman HTML
+    # Get user input data from the form on the HTML page
     outlook = int(request.form['outlook'])  
     temp = int(request.form['temp'])       
     humidity = int(request.form['humidity'])
     wind = int(request.form['wind'])      
     
-    # Membuat array 2D dengan input pengguna untuk digunakan dalam prediksi
+    # Create a 2D array with user input to use for prediction
     x = np.array([[outlook, temp, humidity, wind]])
     
-    # Melakukan prediksi menggunakan model yang telah dimuat
+    # Predict the result using the loaded machine learning model
     prediction = model.predict(x)
     
-    # Daftar kategori outlook, temperatur, humidity, dan wind untuk ditampilkan dalam hasil
+    # Define categories for outlook, temperature, humidity, and wind to display in the result
     outlooks = ['Overcast', 'Rain', 'Sunny']
     temps = ['Cool', 'Hot', 'Mild']
     humiditys = ['High', 'Normal']
     winds = ['Strong', 'Weak']
     
-    # Menentukan hasil berdasarkan prediksi (0 berarti tidak bisa bermain, 1 berarti bisa bermain)
+    # Determine the result based on the prediction (0 means cannot play, 1 means can play)
     if(prediction == 0):
-        play = "Tidak Bisa Bermain!"
+        play = "You cannot play tennis."
     elif(prediction == 1):
-        play = "Bisa Bermain!"
+        play = "You can play tennis."
     
-    # Mengembalikan hasil prediksi ke halaman HTML, bersama dengan input yang telah dipilih pengguna
-    return render_template('index.html', hasil=play, outlook=outlooks[outlook], temp=temps[temp], 
+    # Return the prediction result to the HTML page, along with the user's selected inputs
+    return render_template('index.html', hasil=play, outlook=outlooks[outlook], temp=temps[temp],
                            humidity=humiditys[humidity], wind=winds[wind])
 
-# Menjalankan aplikasi Flask dalam mode debug
+# Run the Flask application in debug mode
 if __name__ == '__main__':
     app.run(debug=True)
