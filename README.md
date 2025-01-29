@@ -86,7 +86,7 @@ Output berupa hasil prediksi: `Tidak Bisa Bermain!` **atau** `Bisa Bermain!`
 
 Tampilan form:
 
-![Interface](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Simple%20Interface.jpg)
+![Interface](https://github.com/listiangr/Play_Tennis_Classification/blob/main/Simple%20Interface.png)
 
 ## Conclusion
 - Model menunjukkan **akurasinya sebesar 80%**, yang menunjukkan kinerja yang cukup baik secara keseluruhan.
